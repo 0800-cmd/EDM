@@ -1,0 +1,4 @@
+﻿.playwright-mcp/
+pdf_data.json
+extracted_images.json
+*.py

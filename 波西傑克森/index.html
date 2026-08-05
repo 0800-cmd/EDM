@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>台灣活所在 電子報</title>
+<title>波西傑克森：神火之賊 電子報</title>
 <style>
 :root {
   --terracotta: #C4815A;
@@ -27,7 +27,7 @@
 
 body {
   font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
-  background: url('generated/taiwan-life-bg_20260805_114617.png') center/cover no-repeat fixed;
+  background: url('generated/percy-jackson-bg_20260727_163942.png') center/cover no-repeat fixed;
   background-color: var(--cream-dark);
   color: var(--text);
   line-height: 1.8;
@@ -120,6 +120,26 @@ body {
   line-height: 1.7;
 }
 
+.recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.recipe-item {
+  background: #F8F5F0;
+  border: 1px solid #EDE0D0;
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.recipe-item .emoji {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 4px;
+}
+
 .img-block {
   text-align: center;
   margin: 16px 0;
@@ -188,6 +208,7 @@ body {
   .container { padding: 16px 12px 36px; }
   .card { padding: 24px 20px; }
   .card h1 { font-size: 22px; }
+  .recipe-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
@@ -201,59 +222,62 @@ body {
 <div class="container">
 
   <div class="hero">
-    <img src="generated/hero-taiwan-life_20260805_114541_1300x650.jpg" alt="卿鬆翻一頁 - 台灣活所在">
+    <img src="generated/hero-percy-jackson_20260727_163852_1300x650.jpg" alt="卿鬆翻一頁 - 波西傑克森">
   </div>
 
   <div class="card">
-    <h1>翻一頁，開始你的台灣生活觀察</h1>
-    <div class="subtitle">台灣活所在</div>
+    <h1>翻一頁，開始你的希臘神話冒險</h1>
+    <div class="subtitle">波西傑克森1：神火之賊</div>
     <p style="font-size:15px; line-height:1.8; color:var(--text); margin-bottom:12px;">
       嗨嗨！我是卿鬆。不知道你是不是也跟我一樣，有一天發現這個世界再也無法讓你逃離吵雜的生活。跟著我，找回生活的專注與平靜。在這個專屬空間裡，除了有精心挑選的書中精華，文末也為你準備了暖心的小驚喜！
     </p>
     <p style="font-size:15px; line-height:1.8; color:var(--text); margin-bottom:12px;">
-      這一期帶來的書是「台灣活所在」。
+      不知道有沒有人跟我一樣雖然老大不小，但還是依舊很喜歡看青少年的小說。總是會幻想在我們看不到的地方是不是真的有這些世界，而且每天都是神仙妖魔在打架，只是我們是麻瓜所以都不知道。
+    </p>
+    <p style="font-size:15px; line-height:1.8; color:var(--text);">
+      這一集男主角波西真的好倒楣，因為爸爸是海神波塞頓被針對，還莫名被栽贓是小偷偷走宙斯的「閃電火」，差點引起兄弟鬩牆、世界大戰，只能想辦法自證清白。
     </p>
   </div>
 
+  <div class="img-block">
+    <img src="page1_img1.png" alt="波西傑克森書摘圖片">
+  </div>
+
   <div class="card">
-    <div class="section-divider">本 期 亮 點</div>
+    <div class="section-divider">希 臘 神 話 亮 點</div>
     <ul class="features">
       <li>
-        <span class="feature-icon">📢</span>
-        <span class="feature-text"><b>熟悉的廣播聲</b> — 「修理紗門修理玻璃」總是用震耳欲聾的力量迴盪在巷子裡，老闆真會選時間！</span>
+        <span class="feature-icon">⚡</span>
+        <span class="feature-text"><b>眾神八卦</b> — 希臘神話最有趣的莫過於那些眾神之間的愛恨情仇，每個神都超有個性</span>
       </li>
       <li>
-        <span class="feature-icon">🏪</span>
-        <span class="feature-text"><b>日常小角落</b> — 甜甜的水果行、回憶雜貨店、無名攤販、解答命理館，每天路過卻不知不覺消失在生活中</span>
+        <span class="feature-icon">🏛️</span>
+        <span class="feature-text"><b>帝國大廈600樓</b> — 宙斯就住在帝國大廈600樓！這種與現實重疊的描述讓一切都不再遙不可及</span>
       </li>
       <li>
-        <span class="feature-icon">👀</span>
-        <span class="feature-text"><b>台灣感性</b> — 外國遊客透過眼睛看台灣，而這本書透過台灣人的第一視角讓人會心一笑</span>
+        <span class="feature-icon">🐍</span>
+        <span class="feature-text"><b>經典反派</b> — 對到眼就石化的梅杜莎，經典不敗的反派角色</span>
       </li>
       <li>
-        <span class="feature-icon">✨</span>
-        <span class="feature-text"><b>生活的美好</b> — 色彩鮮明的生活插畫，照映其實每個人都生活在美好的世界裡，只是我們沒有發現</span>
+        <span class="feature-icon">🔱</span>
+        <span class="feature-text"><b>青少年冒險</b> — 主角就是位十幾歲的青少年，看這本書的時候好像忘記長大的煩惱</span>
       </li>
       <li>
-        <span class="feature-icon">☀️</span>
-        <span class="feature-text"><b>走出家門</b> — 至少50個「有這些地方，真好」，找個晴朗假日看看家附近的街景吧！</span>
+        <span class="feature-icon">🌊</span>
+        <span class="feature-text"><b>暫時喘口氣</b> — 如果被現實生活壓得喘不過氣，這本小說很適合讓你暫時逃離</span>
       </li>
     </ul>
   </div>
 
-  <div class="img-block">
-    <img src="page1_img1.png" alt="台灣活所在書摘圖片">
-  </div>
-
   <div class="cta-box">
-    <h2>🇹🇼 一起發現台灣的美好</h2>
-    <p>找個晴朗假日走出家門，看看家裡附近的街景吧</p>
+    <h2>🔱 一起翻開波西傑克森</h2>
+    <p>跟著主角一起盡情的衝動冒險闖世界</p>
   </div>
 
   <div class="gift-box">
     <p>
       感謝您的今天的閱報，讀者禮「<strong style="color:var(--terracotta-dark);">10元購物金</strong>」限量100份<br>
-      輸入兌換碼「<strong style="color:var(--terracotta-dark);">卿鬆看寶島台灣</strong>」就可以兌換（發報七日內有效）<br>
+      輸入兌換碼「<strong style="color:var(--terracotta-dark);">卿鬆去冒險</strong>」就可以兌換（發報七日內有效）<br>
       卿鬆翻一頁，我們下頁見！
     </p>
   </div>
