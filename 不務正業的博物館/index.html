@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不務正業的博物館 電子報</title>
+<style>
+:root {
+  --terracotta: #C4815A;
+  --terracotta-dark: #9E6340;
+  --olive: #7D9B6A;
+  --olive-dark: #5E7A4E;
+  --med-blue: #6B8FA3;
+  --cream: #FFF9F2;
+  --cream-dark: #F5EDE4;
+  --warm-brown: #4A3525;
+  --text: #3D2C1A;
+  --text-light: #7A6B5A;
+  --white-90: rgba(255,252,248,0.92);
+  --shadow: 0 4px 24px rgba(74,53,37,0.10);
+  --shadow-lg: 0 8px 40px rgba(74,53,37,0.15);
+  --radius: 16px;
+  --max-w: 680px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+  background: url('generated/museum-bg_20260820_090750.png') center/cover no-repeat fixed;
+  background-color: var(--cream-dark);
+  color: var(--text);
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.hero {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 24px;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-block {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.img-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.card {
+  background: var(--white-90);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.card h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--olive-dark);
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #EDE8E0;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 14px;
+  color: var(--text);
+}
+.card p:last-child { margin-bottom: 0; }
+
+.highlight {
+  background: linear-gradient(135deg, rgba(196,129,90,0.08), rgba(125,155,106,0.08));
+  border-left: 4px solid #6B8F5E;
+  padding: 18px 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 18px 0;
+  font-size: 15px;
+  color: var(--warm-brown);
+  line-height: 1.8;
+}
+.highlight:last-child { margin-bottom: 0; }
+
+.section-divider {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  color: var(--olive);
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--olive);
+  opacity: 0.3;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--olive), var(--olive-dark));
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.cta-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.cta-box p {
+  font-size: 14.5px;
+  opacity: 0.92;
+}
+
+.gift-box {
+  text-align: center;
+  border: 2px dashed var(--terracotta);
+  background: var(--white-90);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+.gift-box p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--warm-brown);
+}
+
+.footer-item {
+  text-align: center;
+  font-size: 14px;
+  color: #8B7D72;
+  margin-bottom: 14px;
+}
+.footer-item a {
+  color: #8B7D72;
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #E0D8CC;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 16px 12px 36px; }
+  .card { padding: 24px 20px; }
+  .card h1 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 20px 16px; }
+  .card h1 { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <img src="generated/hero-museum_1300x650.jpg" alt="不務正業的博物館">
+  </div>
+
+  <div class="card">
+    <h1>翻一頁，走進這座「不務正業」的博物館</h1>
+    <div class="subtitle">古人比你想的還荒謬！維納斯打屁股、荒唐理由也請假？</div>
+    <p>嗨嗨！我是卿鬆。不知道你是不是也跟我一樣，有一天發現這個世界再也無法讓你逃離吵雜的生活。</p>
+    <p>跟著我，找回生活的專注與平靜。在這個專屬空間裡，除了有精心挑選的書中精華，文末也為你準備了暖心的小驚喜！</p>
+    <div class="highlight">這一期帶來的書是「不務正業的博物館」</div>
+  </div>
+
+  <div class="card">
+    <div class="section-divider">古 人 比 你 想 的 還 荒 謬</div>
+    <p>做錯事就該打屁股！就算你是神仙也不例外。</p>
+    <p>畫裡維納斯一手抓著邱比特的頭髮、一手拿著木條，後面一個驚慌逃跑的小天使。</p>
+    <div class="highlight">你以為維納斯只敢教訓自己的小孩嗎？才不！他也教訓色鬼牧神潘。</div>
+  </div>
+
+  <div class="card">
+    <div class="section-divider">古 埃 及 人 也 不 想 上 班</div>
+    <p>不想上班可不是現代人才有的問題啊！古埃及人也不想上班啊～</p>
+    <p>充斥著無法想像到原因，真的好荒謬：「今天被蠍子咬了」、「我要釀啤酒」、「眼睛好痛」、「蓋房子」。</p>
+    <div class="highlight">卿鬆可以因為每天盯著電腦上班、用眼睛痛也請假嗎？</div>
+  </div>
+
+  <div class="card">
+    <div class="section-divider">愛 貓 成 癡 的 歌 川 國 芳</div>
+    <p>浮世繪大師歌川國芳，愛貓成癡完全是貓奴啊！</p>
+    <p>為了貓咪開除弟子、讓貓入畫挑戰反骨精神、挑戰當時的政策。</p>
+    <div class="highlight">本來就是紅人居然還能更加聲名大噪，真的是逆境中求生存的好手！</div>
+  </div>
+
+  <div class="card">
+    <p>這本書也算是讓我大開眼界、看的一直笑。各種超有戲的文物秘密，有些還是旅遊時有在博物館親眼看過的，完全沒有想到背後藏有這一番小笑話。</p>
+    <p>這幾年旅遊、看展真的好盛行。如果對歷史足跡的背後有趣小祕密好奇，這本書真的讓人嘴角微笑。</p>
+  </div>
+
+  <div class="cta-box">
+    <h2>🏛️ 一起走進這座不務正業的博物館</h2>
+    <p>翻開書，看看文物背後藏的一番小笑話</p>
+  </div>
+
+  <div class="gift-box">
+    <p>
+      感謝您的今天的閱報，讀者禮「<strong style="color:var(--terracotta-dark);">10元購物金</strong>」限量100份<br>
+      輸入兌換碼「<strong style="color:var(--terracotta-dark);">卿鬆走進博物館</strong>」就可以兌換（發報七日內有效）<br>
+      卿鬆翻一頁，我們下頁見！
+    </p>
+  </div>
+
+  <div class="footer-item">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfBeuECJmAnhRDTRv-i6509RGbg3VRolu7_BuAPBPM9pnNXCQ/viewform" target="_blank">不想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://campub.com.tw/article/detail/exchangeBonus" target="_blank">購物金兌換說明</a>
+  </div>
+
+  <div class="footer">
+    <p>卿鬆翻一頁 &#169; 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
