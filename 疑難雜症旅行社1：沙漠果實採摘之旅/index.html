@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>疑難雜症旅行社1：沙漠果實採摘之旅 電子報</title>
+<style>
+:root {
+  --terracotta: #C4815A;
+  --terracotta-dark: #9E6340;
+  --olive: #7D9B6A;
+  --olive-dark: #5E7A4E;
+  --med-blue: #6B8FA3;
+  --cream: #FFF9F2;
+  --cream-dark: #F5EDE4;
+  --warm-brown: #4A3525;
+  --text: #3D2C1A;
+  --text-light: #7A6B5A;
+  --white-90: rgba(255,252,248,0.92);
+  --shadow: 0 4px 24px rgba(74,53,37,0.10);
+  --shadow-lg: 0 8px 40px rgba(74,53,37,0.15);
+  --radius: 16px;
+  --max-w: 680px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+  background: url('generated/desert-travel-bg.jpg') center/cover no-repeat fixed;
+  background-color: var(--cream-dark);
+  color: var(--text);
+  line-height: 1.9;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.hero {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 24px;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  background: var(--white-90);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.card h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--olive-dark);
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #EDE8E0;
+}
+
+/* 敘事型：段落 */
+.narrative {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+/* 敘事型：Highlight 強調框 */
+.highlight {
+  background: linear-gradient(135deg, rgba(196,129,90,0.08), rgba(125,155,106,0.08));
+  border-left: 4px solid var(--olive);
+  padding: 18px 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 16px 0;
+  font-size: 15px;
+  color: var(--warm-brown);
+  line-height: 1.9;
+}
+
+/* 敘事型：章節標題 */
+.section-divider {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  color: var(--olive);
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--olive);
+  opacity: 0.3;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.img-block {
+  text-align: center;
+  margin: 16px 0;
+}
+.img-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--olive), var(--olive-dark));
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.cta-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.cta-box p {
+  font-size: 14.5px;
+  opacity: 0.92;
+}
+
+.gift-box {
+  text-align: center;
+  border: 2px dashed var(--terracotta);
+  background: var(--white-90);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+.gift-box p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--warm-brown);
+}
+
+.footer-item {
+  text-align: center;
+  font-size: 14px;
+  color: #8B7D72;
+  margin-bottom: 14px;
+}
+.footer-item a {
+  color: #8B7D72;
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #E0D8CC;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 16px 12px 36px; }
+  .card { padding: 24px 20px; }
+  .card h1 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 20px 16px; }
+  .card h1 { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <img src="generated/hero-desert-travel_1300x650.jpg" alt="卿鬆翻一頁 - 疑難雜症旅行社1">
+  </div>
+
+  <div class="card">
+    <h1>翻一頁，跟著少年展開沙漠果實採摘之旅</h1>
+    <div class="subtitle">10歲少年誤闖奇幻旅行社，在沙漠裡發現自己意想不到的天賦 🏜</div>
+    <p class="narrative">🖐️ 嗨嗨！我是卿鬆。不知道你是不是也跟我一樣，有一天發現這個世界再也無法讓你逃離吵雜的生活。</p>
+    <p class="narrative">跟著我，找回生活的專注與平靜。在這個專屬空間裡，除了有精心挑選的書中精華，文末也為你準備了暖心的小驚喜！</p>
+    <p class="narrative">這一期帶來的書是<strong style="color:var(--olive-dark);">「疑難雜症旅行社1：沙漠果實採摘之旅」</strong>。</p>
+  </div>
+
+  <div class="card">
+    <p class="narrative">有聽過「廣嶋玲子」老師嗎？紅遍小朋友界的《神奇柑仔店》系列總有聽過吧！</p>
+    <p class="narrative">老師最厲害的就是在滿滿奇幻故事當中讓人學習成長，無論是外在的行為或是內心的世界。</p>
+  </div>
+
+  <div class="img-block">
+    <img src="generated/square-desert-travel.jpg" alt="沙漠旅程插圖">
+  </div>
+
+  <div class="card">
+    <div class="section-divider">書 中 趣 味 故 事</div>
+    <p class="narrative">這次推薦的疑難雜症旅行社第1集，主角偷喝果汁到誤闖旅行社，再被帶到奇幻的沙漠世界。雖然只是位 10 歲的少年，對於旅程雖然感到害怕，但也認識了新朋友。</p>
+    <p class="narrative">也發現原來自己不是什麼都不會——那平常微不足道的煮飯興趣，可以成為讓人眼睛為之一亮的地方，也讓他順利在團體裡漸漸獲得信任與融入。</p>
+    <p class="narrative">故事的最後也誤打誤撞消滅了旅程中的大魔王，完成了這次的意外旅行。</p>
+    <div class="highlight">
+      配搭書中的小插圖，看完後倒讓卿鬆想起小時候看的哆啦A夢電影版——大雄的天方夜譚，不知道你們有沒有也看過這部電影呢？
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-divider">給 大 人 的 小 提 醒</div>
+    <p class="narrative">其實卿鬆最近看了好多大人系的自我成長書籍，不知道你們有沒有像我一樣，偶爾會感受到越看壓力越大呢？</p>
+    <p class="narrative">又或是社群爆紅的初級大人、高級大人分類貼標籤。</p>
+    <div class="highlight">
+      如果覺得大人系書籍讓你喘不過氣，廣嶋玲子老師寫的系列書雖然受眾是國中國小生，但是其實也很適合想輕鬆看書的你。
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h2>💖 想找回單純閱讀的樂趣嗎？</h2>
+    <p>跟著卿鬆一起翻開輕鬆又溫暖的故事 📖</p>
+  </div>
+
+  <div class="gift-box">
+    <p>
+      感謝您的今天的閱報，讀者禮「<strong style="color:var(--terracotta-dark);">10元購物金</strong>」限量100份<br>
+      輸入兌換碼「<strong style="color:var(--terracotta-dark);">卿鬆學成長</strong>」就可以兌換（發報七日內有效）<br>
+      卿鬆翻一頁，我們下頁見！
+    </p>
+  </div>
+
+  <div class="footer-item">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIh1cqkwYjdHs0eIbINBk5cURJQepe3pQK1C0DurQ-nZtm0Q/viewform" target="_blank">想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSfBeuECJmAnhRDTRv-i6509RGbg3VRolu7_BuAPBPM9pnNXCQ/viewform" target="_blank">不想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://campub.com.tw/article/detail/exchangeBonus" target="_blank">購物金兌換說明</a>
+  </div>
+
+  <div class="footer">
+    <p>卿鬆翻一頁 &#169; 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
