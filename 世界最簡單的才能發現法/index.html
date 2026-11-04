@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界最簡單的才能發現法 電子報</title>
+<style>
+:root {
+  --terracotta: #C4815A;
+  --terracotta-dark: #9E6340;
+  --olive: #7D9B6A;
+  --olive-dark: #5E7A4E;
+  --med-blue: #6B8FA3;
+  --cream: #FFF9F2;
+  --cream-dark: #F5EDE4;
+  --warm-brown: #4A3525;
+  --text: #3D2C1A;
+  --text-light: #7A6B5A;
+  --white-90: rgba(255,252,248,0.92);
+  --shadow: 0 4px 24px rgba(74,53,37,0.10);
+  --shadow-lg: 0 8px 40px rgba(74,53,37,0.15);
+  --radius: 16px;
+  --max-w: 680px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+  background: url('generated/talent-bg.jpg') center/cover no-repeat fixed;
+  background-color: var(--cream-dark);
+  color: var(--text);
+  line-height: 1.9;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.hero {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 24px;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  background: var(--white-90);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.card h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--olive-dark);
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #EDE8E0;
+}
+
+/* 敘事型：段落 */
+.narrative {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+/* 敘事型：Highlight 強調框 */
+.highlight {
+  background: linear-gradient(135deg, rgba(196,129,90,0.08), rgba(125,155,106,0.08));
+  border-left: 4px solid var(--olive);
+  padding: 18px 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 16px 0;
+  font-size: 15px;
+  color: var(--warm-brown);
+  line-height: 1.9;
+}
+
+/* 敘事型：章節標題 */
+.section-divider {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  color: var(--olive);
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--olive);
+  opacity: 0.3;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+.img-block {
+  text-align: center;
+  margin: 16px 0;
+}
+.img-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--olive), var(--olive-dark));
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.cta-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.cta-box p {
+  font-size: 14.5px;
+  opacity: 0.92;
+}
+
+.gift-box {
+  text-align: center;
+  border: 2px dashed var(--terracotta);
+  background: var(--white-90);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+.gift-box p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--warm-brown);
+}
+
+.footer-item {
+  text-align: center;
+  font-size: 14px;
+  color: #8B7D72;
+  margin-bottom: 14px;
+}
+.footer-item a {
+  color: #8B7D72;
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #E0D8CC;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 16px 12px 36px; }
+  .card { padding: 24px 20px; }
+  .card h1 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 20px 16px; }
+  .card h1 { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <img src="generated/hero-talent_1300x650.jpg" alt="卿鬆翻一頁 - 世界最簡單的才能發現法">
+  </div>
+
+  <div class="card">
+    <h1>人人都有的才能，你發現了嗎？</h1>
+    <div class="subtitle">那些你做來輕而易舉、融入日常的小事，就是你一直沒發現的才能 ✨</div>
+    <p class="narrative">🖐️ 嗨嗨！我是卿鬆。不知道你是不是也跟我一樣，有一天發現這個世界再也無法讓你逃離吵雜的生活。</p>
+    <p class="narrative">跟著我，找回生活的專注與平靜。在這個專屬空間裡，除了有精心挑選的書中精華，文末也為你準備了暖心的小驚喜！</p>
+    <p class="narrative">這一期帶來的書是<strong style="color:var(--olive-dark);">「世界最簡單的才能發現法」</strong>。</p>
+  </div>
+
+  <div class="card">
+    <div class="section-divider">你 是 不 是 也 這 樣？</div>
+    <p class="narrative">讀書時迷惘，工作時還是迷惘。好像自己沒有什麼特殊專長，但日子好像就這樣過下去了。</p>
+    <p class="narrative">不知道你是不是也有這種感覺呢？</p>
+    <div class="highlight">
+      這本書的作者八木仁平先生，身分很有趣——「自我理解公司」的董事。看到這公司名稱，覺得也太酷了吧！
+    </div>
+  </div>
+
+  <div class="img-block">
+    <img src="generated/square-talent.jpg" alt="才能發現法的日常場景插圖">
+  </div>
+
+  <div class="card">
+    <div class="section-divider">作 者 與 這 本 書</div>
+    <p class="narrative">後來才發現，作者有另一本暢銷書「發現你的天職」，甚至 2 年前就已經被老高與小茉推薦過。</p>
+    <p class="narrative">如果有讀過上一篇卿鬆推薦的書，就會知道——找到才能的答案，其實已經呼之欲出囉。</p>
+    <div class="highlight">
+      每個人都有才能，只是沒被發現。那些自己做來輕而易舉、而且融入平常的地方，就是你的才能！
+    </div>
+    <p class="narrative">上一篇故事中的主角，可是透過煮飯，讓他可以順利繼續冒險呢。</p>
+  </div>
+
+  <div class="card">
+    <div class="section-divider">書 中 最 有 感 的 一 句</div>
+    <p class="narrative">書中就有提到幾個技巧，讓你從生活中找到自己的才能。以下這個可是卿鬆最有感的呢～</p>
+    <div class="highlight">
+      「讓你惱火的人，正在告訴你，你的才能在哪裡。」
+    </div>
+    <p class="narrative">對自己而言是很普通的事情，看到別人做不來時，是不是會忍不住想「為什麼連這種事情都做不到？」而感到惱怒。</p>
+    <p class="narrative">學生時的你做分組作業，上班的你部門團隊合作——一定都發生過這種情形吧。</p>
+  </div>
+
+  <div class="cta-box">
+    <h2>✨ 不知道自己能做什麼嗎？</h2>
+    <p>就從觀察自己的日常生活開始吧 ☕</p>
+  </div>
+
+  <div class="gift-box">
+    <p>
+      感謝您的今天的閱報，讀者禮「<strong style="color:var(--terracotta-dark);">10元購物金</strong>」限量100份<br>
+      輸入兌換碼「<strong style="color:var(--terracotta-dark);">卿鬆找才能</strong>」就可以兌換（發報七日內有效）<br>
+      卿鬆翻一頁，我們下頁見！
+    </p>
+  </div>
+
+  <div class="footer-item">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIh1cqkwYjdHs0eIbINBk5cURJQepe3pQK1C0DurQ-nZtm0Q/viewform" target="_blank">想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSfBeuECJmAnhRDTRv-i6509RGbg3VRolu7_BuAPBPM9pnNXCQ/viewform" target="_blank">不想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://campub.com.tw/article/detail/exchangeBonus" target="_blank">購物金兌換說明</a>
+  </div>
+
+  <div class="footer">
+    <p>卿鬆翻一頁 &#169; 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
