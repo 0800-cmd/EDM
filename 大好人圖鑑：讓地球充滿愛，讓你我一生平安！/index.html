@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大好人圖鑑 電子報</title>
+<style>
+:root {
+  --terracotta: #E08A3C;
+  --terracotta-dark: #B96A24;
+  --olive: #7D9B6A;
+  --olive-dark: #4A6B3E;
+  --sky: #4A9FD8;
+  --cream: #FFF9F2;
+  --cream-dark: #F3EFE8;
+  --warm-brown: #4A3525;
+  --text: #3D2C1A;
+  --text-light: #7A6B5A;
+  --white-90: rgba(255,252,248,0.92);
+  --shadow: 0 4px 24px rgba(74,53,37,0.10);
+  --shadow-lg: 0 8px 40px rgba(74,53,37,0.15);
+  --radius: 16px;
+  --max-w: 680px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+  background: url('generated/big-hearted-bg.jpg') center/cover no-repeat fixed;
+  background-color: var(--cream-dark);
+  color: var(--text);
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.hero {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 24px;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  background: var(--white-90);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.card h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--olive-dark);
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #EDE8E0;
+}
+
+/* 結構型：段落 */
+.narrative {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+/* 結構型：章節標題 */
+.section-divider {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  color: var(--olive-dark);
+}
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--olive-dark);
+  opacity: 0.3;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+/* 結構型：Features 條列 */
+.features { list-style: none; }
+.feature {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #EDE8E0;
+  align-items: flex-start;
+}
+.feature:last-child { border-bottom: 0; }
+.feature-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+  line-height: 1.4;
+}
+.feature-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.feature-text b { color: var(--olive-dark); }
+
+/* 書封引言 */
+.quote-box {
+  background: #FFF4E4;
+  border-left: 4px solid var(--terracotta);
+  border-radius: 0 12px 12px 0;
+  padding: 18px 20px;
+  margin: 18px 0 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--warm-brown);
+}
+.quote-box strong { color: var(--terracotta-dark); }
+
+/* 舉手小卡 */
+.hand-grid {
+  font-size: 0;
+  margin-top: 6px;
+}
+.hand-card {
+  display: inline-block;
+  width: calc(50% - 6px);
+  vertical-align: top;
+  background: #FFF6E9;
+  border: 1px solid #F0D9BC;
+  border-radius: 12px;
+  padding: 16px 14px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--warm-brown);
+}
+.hand-card:nth-child(odd) { margin-right: 12px; }
+.hand-card .emoji { font-size: 20px; display: block; margin-bottom: 4px; }
+.hand-card b { color: var(--terracotta-dark); }
+
+/* 訂閱插卡 */
+.subscribe-box {
+  background: #F4F8F1;
+  border: 1px solid #DCE8D4;
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.subscribe-box .icon { font-size: 22px; margin-bottom: 6px; }
+.subscribe-box h3 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--olive-dark);
+  letter-spacing: 0.02em;
+}
+.subscribe-box p {
+  margin: 0 0 16px;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #5A4A3A;
+}
+.subscribe-box .note {
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  color: #8B7D72;
+}
+.subscribe-btn {
+  display: inline-block;
+  background: var(--olive-dark);
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 24px;
+  text-decoration: none;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--olive), var(--olive-dark));
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.cta-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.cta-box p {
+  font-size: 14.5px;
+  opacity: 0.92;
+}
+
+.gift-box {
+  text-align: center;
+  border: 2px dashed var(--terracotta);
+  background: var(--white-90);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+.gift-box p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--warm-brown);
+}
+.gift-box strong { color: var(--terracotta-dark); }
+
+.footer-item {
+  text-align: center;
+  font-size: 14px;
+  color: #8B7D72;
+  margin-bottom: 14px;
+}
+.footer-item a {
+  color: #8B7D72;
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #E0D8CC;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 16px 12px 36px; }
+  .card { padding: 24px 20px; }
+  .card h1 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 20px 16px; }
+  .card h1 { font-size: 20px; }
+  .hand-card { width: 100%; margin-right: 0; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 文章頂端圖 -->
+  <div class="hero">
+    <img src="generated/article-top-socket_1300x650.jpg" alt="辦公室桌下一起探頭找插座的日常大好人">
+  </div>
+
+  <!-- Intro -->
+  <div class="card">
+    <h1>測測你的「好人基因」！</h1>
+    <div class="subtitle">你也有這些幽默又貼心的日常小動作嗎？</div>
+    <p class="narrative">🖐️嗨嗨！我是卿鬆。不知道你是不是也跟我一樣，有一天發現這個世界再也無法讓你逃離吵雜的生活。</p>
+    <p class="narrative">跟著我，找回生活的專注與平靜。在這個專屬空間裡，除了有精心挑選的書中精華，文末也為你準備了暖心的小驚喜！</p>
+    <p class="narrative">這一期帶來的書是<strong style="color:var(--olive-dark);">「大好人圖鑑：讓地球充滿愛，讓你我一生平安！」</strong>。</p>
+  </div>
+
+  <!-- 你也有好人基因嗎 -->
+  <div class="card">
+    <div class="section-divider">你 &nbsp; 也 &nbsp; 有 &nbsp; 好 &nbsp; 人 &nbsp; 基 &nbsp; 因 &nbsp; 嗎 ？</div>
+    <p class="narrative">先別急著回答，看看以下這些日常小動作，你是不是也默默做過：</p>
+    <ul class="features">
+      <li class="feature">
+        <span class="feature-icon">🏫</span>
+        <span class="feature-text"><b>傳東西的小默契</b> — 教室裡傳遞東西時，前面同學會等你確實拿到再鬆手</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🎧</span>
+        <span class="feature-text"><b>先放下耳機</b> — 和別人說話時，會把耳中的耳機拿起來仔細聆聽</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🚌</span>
+        <span class="feature-text"><b>下車的一聲謝謝</b> — 公車下車時，跟司機說一聲謝謝</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🧹</span>
+        <span class="feature-text"><b>辦公室的守護者</b> — 總有一位姐，默默擔任環境維持小隊長</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">💛</span>
+        <span class="feature-text"><b>其實就是你</b> — 不知道你有沒有發現，身邊那些大好人，或其實自己就是呢？</span>
+      </li>
+    </ul>
+    <div class="quote-box">
+      書封上寫著——<br>
+      <strong>「察覺別人的善意🌸<br>發現自己的好人基因<br>一翻開就讓世界和你我變得更美好的書💖」</strong>
+    </div>
+  </div>
+
+  <!-- 100 個大好人例子 -->
+  <div class="card">
+    <div class="section-divider">100 &nbsp; 個 &nbsp; 大 &nbsp; 好 &nbsp; 人 &nbsp; 例 &nbsp; 子</div>
+    <p class="narrative">書中舉例的 100 個例子，居然真的會有平常忽略的——</p>
+    <ul class="features">
+      <li class="feature">
+        <span class="feature-icon">🔌</span>
+        <span class="feature-text"><b>一起探頭找插座</b> — 彎腰一起探頭幫忙找插座，也可以是大好人</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🐕</span>
+        <span class="feature-text"><b>抱起走不動的牠</b> — 遛狗時，狗狗走不動，會抱起牠一起走的人</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🤯</span>
+        <span class="feature-text"><b>沒想到這樣也可以</b> — 真的是沒想到，這樣也可以！！</span>
+      </li>
+    </ul>
+    <p class="narrative" style="margin-top:12px; margin-bottom:0;">簡單的插畫，卻把這些微小的善意畫得又好笑又溫暖。</p>
+  </div>
+
+  <!-- 卿鬆舉手區 -->
+  <div class="card">
+    <div class="section-divider">卿 &nbsp; 鬆 &nbsp; 舉 &nbsp; 手 &nbsp; 區</div>
+    <p class="narrative">邊看邊忍不住在心裡舉手，以下這些卿鬆全部舉手🙋🏻‍♀️</p>
+    <div class="hand-grid">
+      <div class="hand-card"><span class="emoji">🍿</span><b>看電影吃爆米花</b><br>盡全力不發出聲音的人</div>
+      <div class="hand-card"><span class="emoji">⛰️</span><b>爬山時</b><br>會鼓勵夥伴的人</div>
+      <div class="hand-card"><span class="emoji">✈️</span><b>飛機起飛前</b><br>會認真看宣導影片的人</div>
+      <div class="hand-card"><span class="emoji">😆</span><b>結論</b><br>卿鬆真的是一位大好人</div>
+    </div>
+    <p class="narrative" style="margin-top:6px; margin-bottom:0;">看完這個世界有夠美好！🌍</p>
+  </div>
+
+  <!-- 別小看這本圖鑑 -->
+  <div class="card">
+    <div class="section-divider">別 &nbsp; 小 &nbsp; 看 &nbsp; 這 &nbsp; 本 &nbsp; 圖 &nbsp; 鑑</div>
+    <p class="narrative">可別小看這薄薄的一本圖鑑——</p>
+    <ul class="features">
+      <li class="feature">
+        <span class="feature-icon">🎨</span>
+        <span class="feature-text"><b>詼諧又微浮誇</b> — 簡單插畫，卻表現出詼諧微浮誇的動作</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🌈</span>
+        <span class="feature-text"><b>換一個角度看世界</b> — 如果覺得生活充滿惡意，這本書可以讓你看到不一樣的世界</span>
+      </li>
+      <li class="feature">
+        <span class="feature-icon">🏷️</span>
+        <span class="feature-text"><b>大好人認證貼紙</b> — 裡面附的貼紙，就盡情貼在身邊人或是自己身上吧</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 訂閱插卡（文中價值時刻 CTA） -->
+  <div class="subscribe-box">
+    <div class="icon">📬</div>
+    <h3>喜歡這篇嗎？</h3>
+    <p>每週一封，10 分鐘讀完一本好書的精華。<br><strong style="color:var(--olive-dark);">信裡還藏著一份訂閱限定的特別好禮</strong>，打開信箱才知道 🎁</p>
+    <a class="subscribe-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdIh1cqkwYjdHs0eIbINBk5cURJQepe3pQK1C0DurQ-nZtm0Q/viewform?utm_source=web&amp;utm_medium=mid" target="_blank">免費訂閱卿鬆翻一頁 →</a>
+    <p class="note">只要 Email，隨時可取消，不會寄垃圾信。</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2>💛 你也是隱藏版的大好人嗎？</h2>
+    <p>翻開這本圖鑑，一起把世界和你我變得更美好吧 🌸</p>
+  </div>
+
+  <!-- Reader Gift -->
+  <div class="gift-box">
+    <p>
+      感謝您今天的閱報，讀者禮「<strong>10元購物金</strong>」限量100份<br>
+      輸入兌換碼「<strong>卿鬆是好人</strong>」就可以兌換（發報七日內有效）<br>
+      卿鬆翻一頁，我們下頁見！
+    </p>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="footer-item">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIh1cqkwYjdHs0eIbINBk5cURJQepe3pQK1C0DurQ-nZtm0Q/viewform" target="_blank">想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSfBeuECJmAnhRDTRv-i6509RGbg3VRolu7_BuAPBPM9pnNXCQ/viewform" target="_blank">不想收到卿鬆小編的信請點我</a>
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://campub.com.tw/article/detail/exchangeBonus" target="_blank">購物金兌換說明</a>
+  </div>
+
+  <div class="footer">
+    <p>卿鬆翻一頁 &#169; 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
